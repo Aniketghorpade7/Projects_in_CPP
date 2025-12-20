@@ -30,13 +30,13 @@ int rando(){
     uniform_int_distribution<int> distri(MINI, MAX);
     return distri(generator);
 }
-
+```
 
 ### 1️⃣ The Seed (std::random_device)
-Code:
 
 ```cpp
 random_device{}()
+```
 
 ***Purpose:***
 std::random_device is a non-deterministic random number generator. It requests randomness from the operating system, often sourced from hardware noise.
@@ -45,10 +45,10 @@ std::random_device is a non-deterministic random number generator. It requests r
 It is used only once to seed the random engine. Without proper seeding, the program would generate the exact same sequence of numbers every time it runs, which defeats the purpose of randomness.
 
 ### 2️⃣ The Engine (std::mt19937)
-Code:
 
 ```cpp
 static mt19937 generator(...)
+```
 
 
 ***Purpose:***
@@ -66,10 +66,10 @@ Better performance and improved randomness
 Re-initializing the engine on every call would reduce randomness quality and waste resources.
 
 ### 3️⃣ The Distribution (std::uniform_int_distribution)
-Code:
 
 ```cpp
 uniform_int_distribution<int> distri(MINI, MAX)
+```
 
 ***Purpose:***
 Random engines generate large raw numbers. A distribution maps those numbers into a specific range, in this case 0 to 100.
@@ -92,26 +92,27 @@ Save the source file as:
 
 ```text
 main.cpp
-
+```
 
 ### 2️⃣ Compile the Program
 Using g++:
 
 ```bash
 g++ main.cpp -o guess_game
+```
 
 #### 3️⃣ Run the Program
-Windows
-
-bash
-
-guess_game.exe
-Linux / macOS
 
 ```bash
-./guess_game
+guess_game.exe
+```
 
-🧠 Key Takeaway
+```bash
+#Linux / macOS
+./guess_game
+```
+
+# 🧠 Key Takeaway
 Modern C++ treats randomness as a system, not a single function:
 
 random_device provides entropy
@@ -121,4 +122,3 @@ mt19937 generates high-quality randomness
 uniform_int_distribution ensures fairness
 
 This project follows best practices and is suitable as a foundation for real applications and games.
-

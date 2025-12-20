@@ -104,6 +104,7 @@ g++ main.cpp -o guess_game
 #### 3️⃣ Run the Program
 
 ```bash
+#Windows
 guess_game.exe
 ```
 

@@ -136,7 +136,7 @@ int main() {
     vector<pair<string, int>> emptyMarks = {};
     Student s5("NoExamStudent", 104, emptyMarks);
 
-    // ⚠️ This will CRASH in current code
+    // This will CRASH in current code
     // s5.Display();
 
     cout << "Marks are empty, average cannot be calculated safely.\n";

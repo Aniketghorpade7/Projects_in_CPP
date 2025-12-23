@@ -1,21 +1,7 @@
 #include<iostream>
-#include<vector>
-#include<string>
-#include<utility>
+#include <vector>
 
 using namespace std;
-
-class Student{
-    private:
-        string name;
-        int ID;
-        vector<pair<string, int>> marks;
-
-    public:
-        
-
-
-};
 
 int main(){
     int sub;
